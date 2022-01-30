@@ -21,3 +21,8 @@ function draw() {
      circle(560, 440, 50);
      
 }
+function take_snapshot() {
+    Webcam.snap (function (data_uri) {
+        document.getElementById("result").innerHTML = "<img id='captured_img' src='" + data_uri + "' />";
+    });
+}
